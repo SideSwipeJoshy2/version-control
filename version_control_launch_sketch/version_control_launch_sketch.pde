@@ -7,7 +7,13 @@ void setup(){
 
 void draw(){
   background(0);
-  for (int i = particles.size() - 1; i >= 0; i--){
+  for (int j = particles.size() - 1; j >= 0; j--){
+    particles.get(j).update();
+    particles.get(j).display();
+  for (int j = particles.size() - j; j >= 0; j--){
+    particles.get(j).update();
+    particles.get(j).display();
+  for (int i = particles.size() - i; i >= 0; i--){
     particles.get(i).update();
     particles.get(i).display();
   }
